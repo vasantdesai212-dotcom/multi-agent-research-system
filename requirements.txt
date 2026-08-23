@@ -1,0 +1,28 @@
+# LangChain
+langchain
+langchain-core
+langchain-community
+langchain-openai
+
+# OpenRouter uses an OpenAI-compatible API
+openai
+
+# Tavily web search
+tavily-python
+
+# Web scraping
+beautifulsoup4
+requests
+lxml
+
+# Environment variables
+python-dotenv
+
+# Data validation / structured outputs
+pydantic
+
+# Reliability / retries
+tenacity
+
+# UI
+streamlit
