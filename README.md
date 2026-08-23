@@ -34,18 +34,26 @@ Built with **Python**, **LangChain**, and **OpenRouter**, this project demonstra
 
 ## 🏗️ Architecture
 
-```mermaid
-flowchart LR
-    U([👤 User Query]) --> R[["🔍 Research Agent<br/>gathers & analyzes info"]]
-    R --> W[["✍️ Writer Agent<br/>drafts structured response"]]
-    W --> C[["🧐 Critic Agent<br/>evaluates quality & accuracy"]]
-    C --> F([✅ Final Output])
-
-    style U fill:#1C3C3C,stroke:#fff,color:#fff
-    style R fill:#2563EB,stroke:#fff,color:#fff
-    style W fill:#7C3AED,stroke:#fff,color:#fff
-    style C fill:#DC2626,stroke:#fff,color:#fff
-    style F fill:#16A34A,stroke:#fff,color:#fff
+```
+   👤 User Query
+        │
+        ▼
+ ┌─────────────────┐
+ │ 🔍 Research Agent │   gathers & analyzes info
+ └─────────────────┘
+        │
+        ▼
+ ┌─────────────────┐
+ │ ✍️  Writer Agent  │   drafts structured response
+ └─────────────────┘
+        │
+        ▼
+ ┌─────────────────┐
+ │ 🧐 Critic Agent   │   evaluates quality & accuracy
+ └─────────────────┘
+        │
+        ▼
+   ✅ Final Output
 ```
 
 Each stage is handled by its own agent with a distinct role, and the pipeline (`pipeline.py`) is responsible for passing data between them in order.
